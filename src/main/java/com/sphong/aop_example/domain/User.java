@@ -3,10 +3,9 @@ package com.sphong.aop_example.domain;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.web.PagedResourcesAssembler;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
@@ -14,7 +13,8 @@ import javax.persistence.Id;
 public class User {
 
     @Id
-    private Long idx;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idx;
 
     @Column
     private String email;
@@ -26,5 +26,9 @@ public class User {
     public User(String email, String name) {
         this.email = email;
         this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

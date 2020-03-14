@@ -8,24 +8,25 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Getter
 @NoArgsConstructor
 @Entity
-public class Board {
+public class History {
     @Id
     @GeneratedValue
     private Long idx;
 
     @Column
-    private String title;
+    private Long userId;
 
     @Column
-    private String content;
+    private Date updateDate;
 
     @Builder
-    public Board(String title, String content) {
-        this.title = title;
-        this.content = content;
+    public History(Long userId, Date updateDate) {
+        this.userId = userId;
+        this.updateDate = updateDate;
     }
 }

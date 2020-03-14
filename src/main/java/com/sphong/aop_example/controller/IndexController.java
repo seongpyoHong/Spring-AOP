@@ -4,7 +4,6 @@ import com.sphong.aop_example.domain.Board;
 import com.sphong.aop_example.domain.User;
 import com.sphong.aop_example.service.BoardService;
 import com.sphong.aop_example.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
