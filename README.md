@@ -51,7 +51,7 @@ Spring의 핵심 기술 중 하나로 어플리케이션에 걸쳐 사용되는 
 
 - **Weaving**
 
-    지정된 객체에 Aspect를 적용하여 새로운 Proxy 객체를 
+    지정된 객체에 Aspect를 적용하여 새로운 Proxy 객체를 생성하는 과정을 의미한다.
 
     Spring AOP는 런타임에 Proxy 객체가 생성된다.
 
